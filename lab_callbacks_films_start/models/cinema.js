@@ -17,4 +17,9 @@ Cinema.prototype.filmsByGenre = (filmGenre, films) => {
   return result;
 };
 
+Cinema.prototype.checkYear = (filmYear, films) => {
+  const result = films.some((film) => {return film.year === filmYear});
+  return result;
+};
+
 module.exports = Cinema;
