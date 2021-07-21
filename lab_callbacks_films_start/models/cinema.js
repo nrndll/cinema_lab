@@ -32,4 +32,9 @@ Cinema.prototype.filmsLength = (filmLength, films) => {
   return result;
 };
 
+Cinema.prototype.totalRunningTime = (films) => {
+  const result = films.reduce((accumulator, film) => {return accumulator + film.length});
+  return result;
+}
+
 module.exports = Cinema;
