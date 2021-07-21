@@ -35,7 +35,11 @@ describe('Cinema', function () {
   });
 
 
-  it('should be able to find a film by title');
+  it('should be able to find a film by title', function(){
+    const result = cinema.findFilm('Dunkirk', cinema.films);
+    const actual = dunkirk;
+    assert.strictEqual(actual, result);
+  });
   it('should be able to filter films by genre');
   it('should be able to check whether there are some films from a particular year');
   it('should be able to check whether there are no films from a particular year');
