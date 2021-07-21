@@ -25,5 +25,11 @@ Cinema.prototype.checkYear = (filmYear, films) => {
 Cinema.prototype.noFilms = (filmYear, films) => {
   const result = films.every((film) => {return film.year !== filmYear});
   return result;
-}
+};
+
+Cinema.prototype.filmsLength = (filmLength, films) => {
+  const result = films.every((film) => {return film.length >= filmLength});
+  return result;
+};
+
 module.exports = Cinema;
