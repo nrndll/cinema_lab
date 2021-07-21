@@ -22,4 +22,8 @@ Cinema.prototype.checkYear = (filmYear, films) => {
   return result;
 };
 
+Cinema.prototype.noFilms = (filmYear, films) => {
+  const result = films.every((film) => {return film.year !== filmYear});
+  return result;
+}
 module.exports = Cinema;
